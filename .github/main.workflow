@@ -1,4 +1,4 @@
-workflow "Test the Phalcon Actions" {
+workflow "Test the Composer Actions" {
   on = "push"
   resolves = [
     "Send Discord message"
