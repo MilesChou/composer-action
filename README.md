@@ -9,11 +9,10 @@ GitHub Actions for [Composer](https://getcomposer.org). Base on Docker official 
 
 Via GitHub Workflow
 
-```
-action "Composer Install" {
-  uses = "MilesChou/composer-action@master"
-  args = "install"
-}
+```yaml
+- uses: MilesChou/composer-action@master
+  with:
+    args: install
 ```
 
 ## Credits
