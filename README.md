@@ -9,7 +9,7 @@ GitHub Actions for [Composer](https://getcomposer.org). Base on Docker official 
 [ico-license]: https://img.shields.io/badge/license-MIT-brightgreen.svg
 [link-github-release]: https://github.com/MilesChou/composer-action/releases
 
-## Usage
+## Usage for GitHub Actions
 
 Via GitHub Workflow
 
@@ -18,6 +18,19 @@ Via GitHub Workflow
   with:
     args: install
 ```
+
+## Usage for Docker
+
+See [Docker Hub](https://hub.docker.com/r/mileschou/composer/)
+
+## Supported tags and respective `Dockerfile` links
+
+* [`7.3` (7.3/Dockerfile)](https://github.com/MilesChou/composer-action/blob/master/7.3/Dockerfile)
+* [`7.2` (7.2/Dockerfile)](https://github.com/MilesChou/composer-action/blob/master/7.2/Dockerfile)
+* [`7.1` (7.1/Dockerfile)](https://github.com/MilesChou/composer-action/blob/master/7.1/Dockerfile)
+* [`7.0` (7.0/Dockerfile)](https://github.com/MilesChou/composer-action/blob/master/7.0/Dockerfile)
+* [`5.6` (5.6/Dockerfile)](https://github.com/MilesChou/composer-action/blob/master/5.6/Dockerfile)
+* [`5.5` (5.5/Dockerfile)](https://github.com/MilesChou/composer-action/blob/master/5.5/Dockerfile)
 
 ## Credits
 
