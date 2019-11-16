@@ -22,11 +22,15 @@ VERSIONS="
 "
 
 for version in ${VERSIONS}; do
-    rm -rf ${version}
     mkdir -p ${version}
-
     generated_warning > ${version}/Dockerfile
     cat Dockerfile.template | sed -e 's!%%PHP_VERSION%%!'"${version}-alpine"'!' >> ${version}/Dockerfile
 
     cp docker-entrypoint ${version}/docker-entrypoint
+
+    mkdir -p ${version}/install
+    generated_warning > ${version}/install/Dockerfile
+    echo "FROM mileschou/composer:${version}" >> ${version}/install/Dockerfile
+    echo "" >> ${version}/install/Dockerfile
+    echo "CMD [\"install\"]" >> ${version}/install/Dockerfile
 done
