@@ -1,23 +1,13 @@
-#
-# NOTE: THIS DOCKERFILE IS GENERATED VIA "update.sh"
-#
-# PLEASE DO NOT EDIT IT DIRECTLY.
-#
 FROM php:5.5-alpine
 
 LABEL repository="https://github.com/MilesChou/composer-action" \
-    homepage="https://github.com/MilesChou/composer-action" \
     maintainer="MilesChou <jangconan@gmail.com>"
 
 RUN set -xe && \
-    apk add --no-cache \
-        libzip \
-    && \
     apk add --no-cache --virtual .build-deps \
-        libzip-dev \
         zlib-dev \
     && \
-    docker-php-ext-install -j "$(nproc)" \
+    docker-php-ext-install -j "$(getconf _NPROCESSORS_ONLN)" \
         zip \
     && \
     apk del --no-cache .build-deps \
