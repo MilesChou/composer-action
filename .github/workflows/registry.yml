@@ -3,80 +3,18 @@ name: Publish Docker
 on: [push]
 
 jobs:
-  build73:
+  build:
     runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        version: ["7.3", "7.2", "7.1", "7.0", "5.6", "5.5"]
     steps:
       - uses: actions/checkout@master
-      - name: Publish to Registry
+      - name: Build PHP ${{ matrix.version }} and publish to GitHub Registry
         uses: elgohr/Publish-Docker-Github-Action@master
         with:
-          name: mileschou/composer-action/runner:7.3
+          name: mileschou/composer-action/runner:${{ matrix.version }}
           username: ${{ secrets.GITHUB_USERNAME }}
           password: ${{ secrets.GITHUB_TOKEN }}
           registry: docker.pkg.github.com
-          dockerfile: 7.3/Dockerfile
-
-  build72:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@master
-      - name: Publish to Registry
-        uses: elgohr/Publish-Docker-Github-Action@master
-        with:
-          name: mileschou/composer-action/runner:7.2
-          username: ${{ secrets.GITHUB_USERNAME }}
-          password: ${{ secrets.GITHUB_TOKEN }}
-          registry: docker.pkg.github.com
-          dockerfile: 7.2/Dockerfile
-
-  build71:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@master
-      - name: Publish to Registry
-        uses: elgohr/Publish-Docker-Github-Action@master
-        with:
-          name: mileschou/composer-action/runner:7.1
-          username: ${{ secrets.GITHUB_USERNAME }}
-          password: ${{ secrets.GITHUB_TOKEN }}
-          registry: docker.pkg.github.com
-          dockerfile: 7.1/Dockerfile
-
-  build70:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@master
-      - name: Publish to Registry
-        uses: elgohr/Publish-Docker-Github-Action@master
-        with:
-          name: mileschou/composer-action/runner:7.0
-          username: ${{ secrets.GITHUB_USERNAME }}
-          password: ${{ secrets.GITHUB_TOKEN }}
-          registry: docker.pkg.github.com
-          dockerfile: 7.0/Dockerfile
-
-  build56:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@master
-      - name: Publish to Registry
-        uses: elgohr/Publish-Docker-Github-Action@master
-        with:
-          name: mileschou/composer-action/runner:5.6
-          username: ${{ secrets.GITHUB_USERNAME }}
-          password: ${{ secrets.GITHUB_TOKEN }}
-          registry: docker.pkg.github.com
-          dockerfile: 5.6/Dockerfile
-
-  build55:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@master
-      - name: Publish to Registry
-        uses: elgohr/Publish-Docker-Github-Action@master
-        with:
-          name: mileschou/composer-action/runner:5.5
-          username: ${{ secrets.GITHUB_USERNAME }}
-          password: ${{ secrets.GITHUB_TOKEN }}
-          registry: docker.pkg.github.com
-          dockerfile: 5.5/Dockerfile
+          dockerfile: ${{ matrix.version }}/Dockerfile
