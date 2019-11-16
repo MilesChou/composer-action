@@ -3,10 +3,17 @@ name: Testing
 on: [push]
 
 jobs:
-  build:
+  default:
     runs-on: ubuntu-latest
     steps:
       - name: Composer action
         uses: mileschou/composer-action@master
+        with:
+          args: --help
+  php71:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Composer action
+        uses: mileschou/composer-action/7.1@master
         with:
           args: --help

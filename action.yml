@@ -5,4 +5,4 @@ branding:
   color: orange
 runs:
   using: docker
-  image: Dockerfile
+  image: 7.3/Dockerfile
