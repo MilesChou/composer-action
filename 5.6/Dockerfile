@@ -6,7 +6,6 @@
 FROM php:5.6-alpine
 
 LABEL repository="https://github.com/MilesChou/composer-action" \
-    homepage="https://github.com/MilesChou/composer-action" \
     maintainer="MilesChou <jangconan@gmail.com>"
 
 RUN set -xe && \
