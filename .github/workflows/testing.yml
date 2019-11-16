@@ -1,0 +1,12 @@
+name: Testing
+
+on: [push]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Composer action
+        uses: mileschou/composer-action@master
+        with:
+          args: --help

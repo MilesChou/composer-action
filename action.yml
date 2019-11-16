@@ -1,0 +1,8 @@
+name: Composer Action
+description: Do Composer commands in your actions
+branding:
+  icon: package
+  color: orange
+runs:
+  using: docker
+  image: Dockerfile
