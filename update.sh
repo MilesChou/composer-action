@@ -34,3 +34,12 @@ for version in ${VERSIONS}; do
     echo "" >> ${version}/install/Dockerfile
     echo "CMD [\"install\"]" >> ${version}/install/Dockerfile
 done
+
+generated_warning > Dockerfile
+cat Dockerfile.template | sed -e 's!%%PHP_VERSION%%!'"${LATEST_VERSION}-alpine"'!' >> Dockerfile
+
+mkdir -p install
+generated_warning > install/Dockerfile
+echo "FROM mileschou/composer:${LATEST_VERSION}" >> install/Dockerfile
+echo "" >> install/Dockerfile
+echo "CMD [\"install\"]" >> install/Dockerfile

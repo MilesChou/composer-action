@@ -20,11 +20,9 @@ ENV COMPOSER_ALLOW_SUPERUSER=1 \
     COMPOSER_PATH=/usr/local/bin/composer \
     COMPOSER_VERSION=1.9.1
 
+COPY --from=composer:1.9.1 /usr/bin/composer /usr/local/bin/composer
+
 RUN set -xe && \
-        curl -sS https://getcomposer.org/installer | php && \
-        chmod +x composer.phar && \
-        mv composer.phar ${COMPOSER_PATH} && \
-        composer --version && \
         composer global require hirak/prestissimo && \
         composer clear-cache
 
@@ -34,4 +32,4 @@ WORKDIR /app
 
 ENTRYPOINT ["/usr/local/bin/docker-entrypoint"]
 
-CMD ["composer"]
+CMD ["--help"]
