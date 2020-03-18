@@ -72,8 +72,13 @@ With specify PHP version
 
 See [Docker Hub](https://hub.docker.com/r/mileschou/composer/)
 
+## Usage for GitHub Registry
+
+See [GitHub Packages](https://github.com/MilesChou/composer-action/packages/57067)
+
 ## Supported tags and respective `Dockerfile` links
 
+* [`7.4` (7.4/Dockerfile)](https://github.com/MilesChou/composer-action/blob/master/7.4/Dockerfile)
 * [`7.3` (7.3/Dockerfile)](https://github.com/MilesChou/composer-action/blob/master/7.3/Dockerfile)
 * [`7.2` (7.2/Dockerfile)](https://github.com/MilesChou/composer-action/blob/master/7.2/Dockerfile)
 * [`7.1` (7.1/Dockerfile)](https://github.com/MilesChou/composer-action/blob/master/7.1/Dockerfile)
