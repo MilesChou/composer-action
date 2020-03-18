@@ -10,7 +10,7 @@ generated_warning() {
 	EOH
 }
 
-LATEST_VERSION=7.3
+LATEST_VERSION=7.4
 
 # 5.5 has some custom commands
 VERSIONS="
@@ -19,6 +19,7 @@ VERSIONS="
 7.1
 7.2
 7.3
+7.4
 "
 
 for version in ${VERSIONS}; do
