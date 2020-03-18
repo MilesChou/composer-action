@@ -3,6 +3,9 @@
 [![GitHub Release][ico-release]][link-github-release]
 [![License][ico-license]](LICENSE)
 
+![Testing](https://github.com/MilesChou/composer-action/workflows/Testing/badge.svg)
+![Publish Docker](https://github.com/MilesChou/composer-action/workflows/Publish%20Docker/badge.svg)
+
 GitHub Actions for [Composer](https://getcomposer.org). Base on Docker official [PHP](https://hub.docker.com/_/php) image, and installed [hirak/prestissimo](https://github.com/hirak/prestissimo) package. 
 
 [ico-release]: https://img.shields.io/github/tag/MilesChou/composer-action.svg
