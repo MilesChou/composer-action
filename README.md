@@ -4,7 +4,6 @@
 [![License][ico-license]](LICENSE)
 
 ![Testing](https://github.com/MilesChou/composer-action/workflows/Testing/badge.svg)
-![Publish Docker](https://github.com/MilesChou/composer-action/workflows/Publish%20Docker/badge.svg)
 
 GitHub Actions for [Composer](https://getcomposer.org). Base on Docker official [PHP](https://hub.docker.com/_/php) image, and installed [hirak/prestissimo](https://github.com/hirak/prestissimo) package. 
 
@@ -71,10 +70,6 @@ With specify PHP version
 ## Usage for Docker
 
 See [Docker Hub](https://hub.docker.com/r/mileschou/composer/)
-
-## Usage for GitHub Registry
-
-See [GitHub Packages](https://github.com/MilesChou/composer-action/packages/57067)
 
 ## Supported tags and respective `Dockerfile` links
 
