@@ -10,6 +10,7 @@ LABEL repository="https://github.com/MilesChou/composer-action" \
 
 RUN set -xe && \
     apk add --no-cache \
+        git \
         libzip \
     && \
     apk add --no-cache --virtual .build-deps \
@@ -27,9 +28,9 @@ ENV COMPOSER_ALLOW_SUPERUSER=1 \
     COMPOSER_MEMORY_LIMIT=-1 \
     COMPOSER_HOME=/tmp \
     COMPOSER_PATH=/usr/local/bin/composer \
-    COMPOSER_VERSION=1.9.1
+    COMPOSER_VERSION=1.10.5
 
-COPY --from=composer:1.9.1 /usr/bin/composer /usr/local/bin/composer
+COPY --from=composer:1.10.5 /usr/bin/composer /usr/local/bin/composer
 
 RUN set -xe && \
         composer global require hirak/prestissimo && \

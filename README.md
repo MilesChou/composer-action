@@ -86,6 +86,12 @@ See [GitHub Packages](https://github.com/MilesChou/composer-action/packages/5706
 * [`5.6` (5.6/Dockerfile)](https://github.com/MilesChou/composer-action/blob/master/5.6/Dockerfile)
 * [`5.5` (5.5/Dockerfile)](https://github.com/MilesChou/composer-action/blob/master/5.5/Dockerfile)
 
+The following is built-in tools:
+
+* git
+* zip
+* [hirak/prestissimo](https://github.com/hirak/prestissimo)
+
 ## Credits
 
 * [MilesChou](https://github.com/MilesChou)
