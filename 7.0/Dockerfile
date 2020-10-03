@@ -33,6 +33,7 @@ ENV COMPOSER_ALLOW_SUPERUSER=1 \
 COPY --from=composer:1.10.5 /usr/bin/composer /usr/bin/composer
 
 RUN set -xe && \
+        composer self-update && \
         composer global require hirak/prestissimo && \
         composer clear-cache
 

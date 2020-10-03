@@ -31,7 +31,7 @@ for version in ${VERSIONS}; do
 
     mkdir -p ${version}/install
     generated_warning > ${version}/install/Dockerfile
-    echo "FROM mileschou/composer:${version}" >> ${version}/install/Dockerfile
+    echo "FROM docker.pkg.github.com/mileschou/composer-action/runner:${version}" >> ${version}/install/Dockerfile
     echo "" >> ${version}/install/Dockerfile
     echo "CMD [\"install\"]" >> ${version}/install/Dockerfile
 done

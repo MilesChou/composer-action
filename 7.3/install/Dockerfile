@@ -3,6 +3,6 @@
 #
 # PLEASE DO NOT EDIT IT DIRECTLY.
 #
-FROM mileschou/composer:7.3
+FROM docker.pkg.github.com/mileschou/composer-action/runner:7.3
 
 CMD ["install"]
