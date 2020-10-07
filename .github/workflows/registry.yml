@@ -13,8 +13,8 @@ jobs:
       - name: Build PHP ${{ matrix.version }} and publish to GitHub Registry
         uses: elgohr/Publish-Docker-Github-Action@2.22
         with:
-          name: mileschou/composer-action/runner:${{ matrix.version }}
+          name: mileschou/composer:${{ matrix.version }}
           username: ${{ secrets.GITHUB_USERNAME }}
-          password: ${{ secrets.GITHUB_TOKEN }}
-          registry: docker.pkg.github.com
+          password: ${{ secrets.GHCR_PAT }}
+          registry: ghcr.io
           dockerfile: ${{ matrix.version }}/Dockerfile

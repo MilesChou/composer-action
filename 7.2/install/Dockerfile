@@ -3,6 +3,6 @@
 #
 # PLEASE DO NOT EDIT IT DIRECTLY.
 #
-FROM docker.pkg.github.com/mileschou/composer-action/runner:7.2
+FROM ghcr.io/mileschou/composer:7.2
 
 CMD ["install"]

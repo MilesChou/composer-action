@@ -72,9 +72,9 @@ With specify PHP version
 
 See [Docker Hub](https://hub.docker.com/r/mileschou/composer/)
 
-## Usage for GitHub Registry
+## Usage for GitHub Container Registry
 
-See [GitHub Packages](https://github.com/MilesChou/composer-action/packages/57067)
+See [GitHub Container Registry](https://github.com/users/MilesChou/packages/container/package/composer)
 
 ## Supported tags and respective `Dockerfile` links
 

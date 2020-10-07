@@ -13,7 +13,14 @@ jobs:
   php71:
     runs-on: ubuntu-latest
     steps:
-      - name: Composer action
+      - name: Composer Action test
         uses: mileschou/composer-action/7.1@master
+        with:
+          args: --help
+  php72:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Composer Action install test
+        uses: mileschou/composer-action/7.2/install@master
         with:
           args: --help
