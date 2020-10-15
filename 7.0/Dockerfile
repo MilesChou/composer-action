@@ -5,7 +5,7 @@
 #
 FROM php:7.0-alpine
 
-LABEL org.opencontainers.image.source="https://github.com/OWNER/REPO" \
+LABEL org.opencontainers.image.source="https://github.com/composer-action" \
     repository="https://github.com/MilesChou/composer-action" \
     maintainer="MilesChou <jangconan@gmail.com>"
 
