@@ -5,7 +5,7 @@
 #
 FROM php:7.1-alpine
 
-LABEL org.opencontainers.image.source="https://github.com/composer-action" \
+LABEL org.opencontainers.image.source="https://github.com/MilesChou/composer-action" \
     repository="https://github.com/MilesChou/composer-action" \
     maintainer="MilesChou <jangconan@gmail.com>"
 
@@ -23,7 +23,7 @@ ENV COMPOSER_ALLOW_SUPERUSER=1 \
 COPY --from=composer:1.10.5 /usr/bin/composer /usr/bin/composer
 
 RUN set -xe && \
-        composer self-update && \
+        composer self-update --1 && \
         composer global require hirak/prestissimo && \
         composer clear-cache
 
