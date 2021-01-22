@@ -3,6 +3,6 @@
 #
 # PLEASE DO NOT EDIT IT DIRECTLY.
 #
-FROM mileschou/composer:8.0
+FROM ghcr.io/mileschou/composer:8.0
 
 CMD ["install"]

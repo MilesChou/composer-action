@@ -11,16 +11,16 @@ jobs:
         uses: elgohr/Publish-Docker-Github-Action@2.22
         with:
           name: mileschou/composer
-          tags: "latest,7.4"
+          tags: "latest,8.0"
           username: ${{ secrets.GITHUB_USERNAME }}
           password: ${{ secrets.GHCR_PAT }}
           registry: ghcr.io
-          dockerfile: 7.4/Dockerfile
+          dockerfile: 8.0/Dockerfile
   build:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        version: ["7.3", "7.2", "7.1", "7.0", "5.6", "5.5"]
+        version: ["7.4", "7.3", "7.2", "7.1", "7.0", "5.6", "5.5"]
     steps:
       - uses: actions/checkout@master
       - name: Build PHP ${{ matrix.version }} and publish to GitHub Registry
