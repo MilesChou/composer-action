@@ -12,6 +12,7 @@ LABEL org.opencontainers.image.source="https://github.com/MilesChou/composer-act
 RUN set -xe && \
     apk add --no-cache \
         git \
+        tini \
         unzip
 
 ENV COMPOSER_ALLOW_SUPERUSER=1 \
@@ -21,13 +22,10 @@ ENV COMPOSER_ALLOW_SUPERUSER=1 \
 
 COPY --from=composer:2 /usr/bin/composer /usr/bin/composer
 
-RUN set -xe && \
-        composer self-update --2
-
 COPY docker-entrypoint /usr/local/bin/docker-entrypoint
 
 WORKDIR /app
 
 ENTRYPOINT ["/usr/local/bin/docker-entrypoint"]
 
-CMD ["--info"]
+CMD ["composer"]

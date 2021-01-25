@@ -78,6 +78,9 @@ See [GitHub Container Registry](https://github.com/users/MilesChou/packages/cont
 
 ## Supported tags and respective `Dockerfile` links
 
+**Notice:** Default tags is using Composer v2.
+
+* [`latest`, `8.0` (8.0/Dockerfile)](https://github.com/MilesChou/composer-action/blob/master/8.0/Dockerfile)
 * [`7.4` (7.4/Dockerfile)](https://github.com/MilesChou/composer-action/blob/master/7.4/Dockerfile)
 * [`7.3` (7.3/Dockerfile)](https://github.com/MilesChou/composer-action/blob/master/7.3/Dockerfile)
 * [`7.2` (7.2/Dockerfile)](https://github.com/MilesChou/composer-action/blob/master/7.2/Dockerfile)
@@ -86,11 +89,22 @@ See [GitHub Container Registry](https://github.com/users/MilesChou/packages/cont
 * [`5.6` (5.6/Dockerfile)](https://github.com/MilesChou/composer-action/blob/master/5.6/Dockerfile)
 * [`5.5` (5.5/Dockerfile)](https://github.com/MilesChou/composer-action/blob/master/5.5/Dockerfile)
 
+Here is tags for using Composer v1:
+
+* [`v1`, `8.0-v1` (8.0/Dockerfile)](https://github.com/MilesChou/composer-action/blob/master/8.0/Dockerfile)
+* [`7.4-v1` (7.4/Dockerfile)](https://github.com/MilesChou/composer-action/blob/master/7.4/Dockerfile)
+* [`7.3-v1` (7.3/Dockerfile)](https://github.com/MilesChou/composer-action/blob/master/7.3/Dockerfile)
+* [`7.2-v1` (7.2/Dockerfile)](https://github.com/MilesChou/composer-action/blob/master/7.2/Dockerfile)
+* [`7.1-v1` (7.1/Dockerfile)](https://github.com/MilesChou/composer-action/blob/master/7.1/Dockerfile)
+* [`7.0-v1` (7.0/Dockerfile)](https://github.com/MilesChou/composer-action/blob/master/7.0/Dockerfile)
+* [`5.6-v1` (5.6/Dockerfile)](https://github.com/MilesChou/composer-action/blob/master/5.6/Dockerfile)
+* [`5.5-v1` (5.5/Dockerfile)](https://github.com/MilesChou/composer-action/blob/master/5.5/Dockerfile)
+
 The following is built-in tools:
 
 * git
 * zip
-* [hirak/prestissimo](https://github.com/hirak/prestissimo)
+* [hirak/prestissimo](https://github.com/hirak/prestissimo) (Composer v1)
 
 ## Credits
 

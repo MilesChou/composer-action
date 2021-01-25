@@ -20,7 +20,12 @@ ENV COMPOSER_ALLOW_SUPERUSER=1 \
     COMPOSER_HOME=/tmp \
     COMPOSER_PATH=/usr/bin/composer
 
-COPY --from=composer:2 /usr/bin/composer /usr/bin/composer
+COPY --from=composer:1 /usr/bin/composer /usr/bin/composer
+
+RUN set -xe && \
+        composer self-update --1 && \
+        composer global require hirak/prestissimo && \
+        composer clear-cache
 
 COPY docker-entrypoint /usr/local/bin/docker-entrypoint
 

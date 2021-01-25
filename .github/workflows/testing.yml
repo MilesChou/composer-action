@@ -10,6 +10,13 @@ jobs:
         uses: mileschou/composer-action@master
         with:
           args: --help
+  v1:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Composer action
+        uses: mileschou/composer-action/v1@master
+        with:
+          args: --help
   php71:
     runs-on: ubuntu-latest
     steps:
@@ -22,5 +29,12 @@ jobs:
     steps:
       - name: Composer Action install test
         uses: mileschou/composer-action/7.2/install@master
+        with:
+          args: --help
+  php80_v1:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Composer Action install test
+        uses: mileschou/composer-action/8.0/v1@master
         with:
           args: --help
