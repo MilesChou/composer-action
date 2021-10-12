@@ -98,7 +98,7 @@ Here is tags for using Composer v1:
 * [`7.1-v1` (7.1/Dockerfile)](https://github.com/MilesChou/composer-action/blob/master/7.1/Dockerfile)
 * [`7.0-v1` (7.0/Dockerfile)](https://github.com/MilesChou/composer-action/blob/master/7.0/Dockerfile)
 * [`5.6-v1` (5.6/Dockerfile)](https://github.com/MilesChou/composer-action/blob/master/5.6/Dockerfile)
-* [`5.5-v1` (5.5/Dockerfile)](https://github.com/MilesChou/composer-action/blob/master/5.5/Dockerfile)
+* [`5.5-v1` (5.5/Dockerfile)](https://github.com/MilesChou/composer-action/blob/master/5.5/Dockerfile) - no longer update
 
 The following is built-in tools:
 
