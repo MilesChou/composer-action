@@ -3,7 +3,7 @@ name: Publish Docker
 on:
   push:
   schedule:
-    - cron: '0 0 * * *'
+    - cron: '0 0 * * 4'
 
 jobs:
   latest:
@@ -15,8 +15,8 @@ jobs:
         with:
           name: mileschou/composer
           tags: "latest,8.0"
-          username: ${{ secrets.GITHUB_USERNAME }}
-          password: ${{ secrets.GHCR_PAT }}
+          username: mileschou
+          password: ${{ secrets.GITHUB_TOKEN }}
           registry: ghcr.io
           dockerfile: 8.0/Dockerfile
   build:
@@ -30,8 +30,8 @@ jobs:
         uses: elgohr/Publish-Docker-Github-Action@2.22
         with:
           name: mileschou/composer:${{ matrix.version }}
-          username: ${{ secrets.GITHUB_USERNAME }}
-          password: ${{ secrets.GHCR_PAT }}
+          username: mileschou
+          password: ${{ secrets.GITHUB_TOKEN }}
           registry: ghcr.io
           dockerfile: ${{ matrix.version }}/Dockerfile
 
@@ -44,8 +44,8 @@ jobs:
         with:
           name: mileschou/composer
           tags: "v1,8.0-v1"
-          username: ${{ secrets.GITHUB_USERNAME }}
-          password: ${{ secrets.GHCR_PAT }}
+          username: mileschou
+          password: ${{ secrets.GITHUB_TOKEN }}
           registry: ghcr.io
           dockerfile: 8.0/v1/Dockerfile
   build_v1:
@@ -59,7 +59,7 @@ jobs:
         uses: elgohr/Publish-Docker-Github-Action@2.22
         with:
           name: mileschou/composer:${{ matrix.version }}-v1
-          username: ${{ secrets.GITHUB_USERNAME }}
-          password: ${{ secrets.GHCR_PAT }}
+          username: mileschou
+          password: ${{ secrets.GITHUB_TOKEN }}
           registry: ghcr.io
           dockerfile: ${{ matrix.version }}/v1/Dockerfile
