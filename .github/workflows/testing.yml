@@ -1,6 +1,8 @@
 name: Testing
 
-on: [push]
+on:
+  push:
+  pull_request:
 
 jobs:
   default:
@@ -10,6 +12,8 @@ jobs:
         uses: mileschou/composer-action@master
         with:
           args: --help
+      - name: Test PHP version
+        run: php -v
   v1:
     runs-on: ubuntu-latest
     steps:
@@ -17,6 +21,8 @@ jobs:
         uses: mileschou/composer-action/v1@master
         with:
           args: --help
+      - name: Test PHP version
+        run: php -v
   php71:
     runs-on: ubuntu-latest
     steps:
@@ -24,6 +30,8 @@ jobs:
         uses: mileschou/composer-action/7.1@master
         with:
           args: --help
+      - name: Test PHP version
+        run: php -v
   php72:
     runs-on: ubuntu-latest
     steps:
@@ -31,6 +39,8 @@ jobs:
         uses: mileschou/composer-action/7.2/install@master
         with:
           args: --help
+      - name: Test PHP version
+        run: php -v
   php80_v1:
     runs-on: ubuntu-latest
     steps:
@@ -38,3 +48,5 @@ jobs:
         uses: mileschou/composer-action/8.0/v1@master
         with:
           args: --help
+      - name: Test PHP version
+        run: php -v
