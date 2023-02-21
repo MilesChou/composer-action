@@ -1,6 +1,8 @@
 name: Testing
 
-on: [push]
+on:
+  push:
+  pull_request:
 
 jobs:
   default:
@@ -38,3 +40,8 @@ jobs:
         uses: mileschou/composer-action/8.0/v1@master
         with:
           args: --help
+  php_version:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Test PHP version
+        run: php -v
