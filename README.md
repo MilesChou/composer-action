@@ -1,4 +1,4 @@
-# Docker and GitHub Actions for Composer
+# Docker and GitHub Actions for Composer 
 
 [![GitHub Release][ico-release]][link-github-release]
 [![License][ico-license]](LICENSE)
