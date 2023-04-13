@@ -3,6 +3,6 @@
 #
 # PLEASE DO NOT EDIT IT DIRECTLY.
 #
-FROM mileschou/composer:8.1
+FROM mileschou/composer:8.2
 
 CMD ["install"]

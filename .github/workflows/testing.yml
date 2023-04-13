@@ -1,8 +1,7 @@
 name: Testing
 
 on:
-  push:
-  pull_request:
+  workflow_call:
 
 jobs:
   default:
@@ -33,11 +32,11 @@ jobs:
         uses: mileschou/composer-action/7.2/install@master
         with:
           args: --help
-  php80_v1:
+  php82_v1:
     runs-on: ubuntu-latest
     steps:
       - name: Composer Action install test
-        uses: mileschou/composer-action/8.0/v1@master
+        uses: mileschou/composer-action/8.2/v1@master
         with:
           args: --help
   php_version:

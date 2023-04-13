@@ -11,9 +11,9 @@ jobs:
   latest:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@master
+      - uses: actions/checkout@v3
       - name: Build latest version and publish to GitHub Registry
-        uses: elgohr/Publish-Docker-Github-Action@2.22
+        uses: elgohr/Publish-Docker-Github-Action@v5
         with:
           name: mileschou/composer
           tags: "latest,8.1"
@@ -27,9 +27,9 @@ jobs:
       matrix:
         version: ["8.0", "7.4", "7.3", "7.2", "7.1", "7.0", "5.6", "5.5"]
     steps:
-      - uses: actions/checkout@master
+      - uses: actions/checkout@v3
       - name: Build PHP ${{ matrix.version }} and publish to GitHub Registry
-        uses: elgohr/Publish-Docker-Github-Action@2.22
+        uses: elgohr/Publish-Docker-Github-Action@v5
         with:
           name: mileschou/composer:${{ matrix.version }}
           username: mileschou
@@ -40,9 +40,9 @@ jobs:
   latest_v1:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@master
+      - uses: actions/checkout@v3
       - name: Build latest version and publish to GitHub Registry
-        uses: elgohr/Publish-Docker-Github-Action@2.22
+        uses: elgohr/Publish-Docker-Github-Action@v5
         with:
           name: mileschou/composer
           tags: "v1,8.1-v1"
@@ -56,12 +56,16 @@ jobs:
       matrix:
         version: ["8.0", "7.4", "7.3", "7.2", "7.1", "7.0", "5.6"]
     steps:
-      - uses: actions/checkout@master
+      - uses: actions/checkout@v3
       - name: Build PHP ${{ matrix.version }} and publish to GitHub Registry
-        uses: elgohr/Publish-Docker-Github-Action@2.22
+        uses: elgohr/Publish-Docker-Github-Action@v5
         with:
           name: mileschou/composer:${{ matrix.version }}-v1
           username: mileschou
           password: ${{ secrets.GITHUB_TOKEN }}
           registry: ghcr.io
           dockerfile: ${{ matrix.version }}/v1/Dockerfile
+
+  testing:
+    needs: [latest, build, latest_v1, build_v1]
+    uses: ./.github/workflows/testing.yml
