@@ -80,7 +80,8 @@ See [GitHub Container Registry](https://github.com/users/MilesChou/packages/cont
 
 **Notice:** Default tags is using Composer v2.
 
-* [`latest`, `8.1` (8.0/Dockerfile)](https://github.com/MilesChou/composer-action/blob/master/8.1/Dockerfile)
+* [`latest`, `8.2` (8.2/Dockerfile)](https://github.com/MilesChou/composer-action/blob/master/8.2/Dockerfile)
+* [`8.1` (8.1/Dockerfile)](https://github.com/MilesChou/composer-action/blob/master/8.1/Dockerfile)
 * [`8.0` (8.0/Dockerfile)](https://github.com/MilesChou/composer-action/blob/master/8.0/Dockerfile)
 * [`7.4` (7.4/Dockerfile)](https://github.com/MilesChou/composer-action/blob/master/7.4/Dockerfile)
 * [`7.3` (7.3/Dockerfile)](https://github.com/MilesChou/composer-action/blob/master/7.3/Dockerfile)
@@ -92,7 +93,8 @@ See [GitHub Container Registry](https://github.com/users/MilesChou/packages/cont
 
 Here is tags for using Composer v1:
 
-* [`v1`, `8.1-v1` (8.0/Dockerfile)](https://github.com/MilesChou/composer-action/blob/master/8.1/Dockerfile)
+* [`v1`, `8.2-v1` (8.2/Dockerfile)](https://github.com/MilesChou/composer-action/blob/master/8.2/Dockerfile)
+* [`8.1-v1` (8.1/Dockerfile)](https://github.com/MilesChou/composer-action/blob/master/8.1/Dockerfile)
 * [`8.0-v1` (8.0/Dockerfile)](https://github.com/MilesChou/composer-action/blob/master/8.0/Dockerfile)
 * [`7.4-v1` (7.4/Dockerfile)](https://github.com/MilesChou/composer-action/blob/master/7.4/Dockerfile)
 * [`7.3-v1` (7.3/Dockerfile)](https://github.com/MilesChou/composer-action/blob/master/7.3/Dockerfile)
