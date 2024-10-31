@@ -12,6 +12,7 @@ jobs:
   latest:
     runs-on: ubuntu-latest
     steps:
+      - uses: docker/setup-buildx-action@v2
       - uses: actions/checkout@v4
       - name: Build latest version and publish to GitHub Registry
         uses: elgohr/Publish-Docker-Github-Action@v5
@@ -22,13 +23,15 @@ jobs:
           password: ${{ secrets.GITHUB_TOKEN }}
           registry: ghcr.io
           dockerfile: 8.3/Dockerfile
+          platforms: linux/amd64,linux/arm64
 
   build:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        version: ["8.2", "8.1", "8.0", "7.4", "7.3", "7.2", "7.1", "7.0", "5.6", "5.5"]
+        version: ["8.2", "8.1", "8.0", "7.4", "7.3", "7.2", "7.1", "7.0", "5.6"]
     steps:
+      - uses: docker/setup-buildx-action@v2
       - uses: actions/checkout@v4
       - name: Build PHP ${{ matrix.version }} and publish to GitHub Registry
         uses: elgohr/Publish-Docker-Github-Action@v5
@@ -38,10 +41,12 @@ jobs:
           password: ${{ secrets.GITHUB_TOKEN }}
           registry: ghcr.io
           dockerfile: ${{ matrix.version }}/Dockerfile
+          platforms: linux/amd64,linux/arm64
 
   latest_v1:
     runs-on: ubuntu-latest
     steps:
+      - uses: docker/setup-buildx-action@v2
       - uses: actions/checkout@v4
       - name: Build latest version and publish to GitHub Registry
         uses: elgohr/Publish-Docker-Github-Action@v5
@@ -52,6 +57,7 @@ jobs:
           password: ${{ secrets.GITHUB_TOKEN }}
           registry: ghcr.io
           dockerfile: 8.3/v1/Dockerfile
+          platforms: linux/amd64,linux/arm64
 
   build_v1:
     runs-on: ubuntu-latest
@@ -59,6 +65,7 @@ jobs:
       matrix:
         version: ["8.2", "8.1", "8.0", "7.4", "7.3", "7.2", "7.1", "7.0", "5.6"]
     steps:
+      - uses: docker/setup-buildx-action@v2
       - uses: actions/checkout@v4
       - name: Build PHP ${{ matrix.version }} and publish to GitHub Registry
         uses: elgohr/Publish-Docker-Github-Action@v5
@@ -68,6 +75,7 @@ jobs:
           password: ${{ secrets.GITHUB_TOKEN }}
           registry: ghcr.io
           dockerfile: ${{ matrix.version }}/v1/Dockerfile
+          platforms: linux/amd64,linux/arm64
 
   testing:
     needs: [latest, build, latest_v1, build_v1]

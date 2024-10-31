@@ -89,7 +89,7 @@ See [GitHub Container Registry](https://github.com/users/MilesChou/packages/cont
 * [`7.1` (7.1/Dockerfile)](https://github.com/MilesChou/composer-action/blob/master/7.1/Dockerfile)
 * [`7.0` (7.0/Dockerfile)](https://github.com/MilesChou/composer-action/blob/master/7.0/Dockerfile)
 * [`5.6` (5.6/Dockerfile)](https://github.com/MilesChou/composer-action/blob/master/5.6/Dockerfile)
-* [`5.5` (5.5/Dockerfile)](https://github.com/MilesChou/composer-action/blob/master/5.5/Dockerfile)
+* [`5.5` (5.5/Dockerfile)](https://github.com/MilesChou/composer-action/blob/master/5.5/Dockerfile) - no longer update
 
 Here is tags for using Composer v1:
 

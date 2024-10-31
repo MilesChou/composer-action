@@ -1,4 +1,4 @@
-PLATFORM := linux/amd64
+PLATFORM := linux/amd64,linux/arm64
 
 .PHONY: all
 all: 8.3
