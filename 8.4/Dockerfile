@@ -3,7 +3,7 @@
 #
 # PLEASE DO NOT EDIT IT DIRECTLY.
 #
-FROM php:8.1-alpine
+FROM php:8.4-alpine
 
 LABEL org.opencontainers.image.source="https://github.com/MilesChou/composer-action" \
     repository="https://github.com/MilesChou/composer-action" \
@@ -20,11 +20,7 @@ ENV COMPOSER_ALLOW_SUPERUSER=1 \
     COMPOSER_HOME=/tmp \
     COMPOSER_PATH=/usr/bin/composer
 
-COPY --from=composer:1 /usr/bin/composer /usr/bin/composer
-
-RUN set -xe && \
-        composer self-update --1 && \
-        composer clear-cache
+COPY --from=composer:2 /usr/bin/composer /usr/bin/composer
 
 COPY docker-entrypoint /usr/local/bin/docker-entrypoint
 

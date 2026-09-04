@@ -10,7 +10,7 @@ generated_warning() {
 	EOH
 }
 
-LATEST_VERSION=8.3
+LATEST_VERSION=8.5
 
 VERSIONS="
 7.2
@@ -20,6 +20,8 @@ VERSIONS="
 8.1
 8.2
 8.3
+8.4
+8.5
 "
 
 for version in ${VERSIONS}; do
