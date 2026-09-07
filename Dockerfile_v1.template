@@ -22,7 +22,7 @@ RUN set -xe && \
         composer clear-cache
 
 COPY docker-entrypoint /usr/local/bin/docker-entrypoint
-RUN chmod +x docker-entrypoint
+RUN chmod +x /usr/local/bin/docker-entrypoint
 
 WORKDIR /app
 
