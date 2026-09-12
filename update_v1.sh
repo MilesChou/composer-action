@@ -27,8 +27,6 @@ for version in ${VERSIONS}; do
     generated_warning > ${version}/v1/Dockerfile
     cat Dockerfile_v1.template | sed -e 's!%%PHP_VERSION%%!'"${version}-alpine"'!' >> ${version}/v1/Dockerfile
 
-    cp docker-entrypoint ${version}/v1/docker-entrypoint
-
     mkdir -p ${version}/v1/install
     generated_warning > ${version}/v1/install/Dockerfile
     echo "FROM ghcr.io/mileschou/composer:${version}-v1" >> ${version}/v1/install/Dockerfile
@@ -40,8 +38,6 @@ mkdir -p v1
 
 generated_warning > v1/Dockerfile
 cat Dockerfile_v1.template | sed -e 's!%%PHP_VERSION%%!'"${LATEST_VERSION}-alpine"'!' >> v1/Dockerfile
-
-cp docker-entrypoint v1/docker-entrypoint
 
 mkdir -p v1/install
 generated_warning > v1/install/Dockerfile

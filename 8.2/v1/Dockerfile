@@ -26,8 +26,7 @@ RUN set -xe && \
         composer self-update --1 && \
         composer clear-cache
 
-COPY docker-entrypoint /usr/local/bin/docker-entrypoint
-RUN chmod +x /usr/local/bin/docker-entrypoint
+COPY --from=composer:1 /docker-entrypoint.sh /usr/local/bin/docker-entrypoint
 
 WORKDIR /app
 
